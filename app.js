@@ -15,8 +15,8 @@ const displayTemmp = (weather) => {
     temp.innerHTML = `
     <img src=" ${weather.current.condition.icon}" alt="">
     <h1>${weather.location.name}</h1>
-    <p Current Temperature:  ${weather.current.temp_c}</h1>
-    <p Feels Like:  ${weather.current.feelslike_c}</h1>
+    <p> Current Temperature:  ${weather.current.temp_c ? weather.current.temp_c : 'Temp not found'}</p>
+    <p> Feels Like:  ${weather.current.feelslike_c ? weather.current.feelslike_c : 'Temp not Found'}</p>
     <p> Current Condition:  ${weather.current.condition.text}</p>
     <p> Humidity:  ${weather.current.humidity}</p>
     <p> Wind:  ${weather.current.wind_kph}<span>Km</span></p>
